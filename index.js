@@ -1,6 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
+
+// 🔥 IMPORTANTE
+app.use(cors());
 app.use(express.json());
 
 // Función de análisis simple
@@ -79,7 +83,7 @@ res.json({ reply: respuesta });
 
 });
 
-// Endpoint de prueba (para navegador)
+// Endpoint de prueba
 app.get("/", (req, res) => {
 res.send("Servidor de bot médico funcionando 🔥");
 });

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/RodrigoL27/Estadia-BOT-IA#readme",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1"
   }
 }
