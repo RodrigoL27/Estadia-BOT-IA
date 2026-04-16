@@ -1,7 +1,7 @@
 {
   "name": "proyecto-estadia",
   "version": "1.0.0",
-  "description": "",
+  "description": "<em> # Agente Vía Salud </em>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/RodrigoL27/Estadia-BOT-IA#readme",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1"
   }
 }

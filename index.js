@@ -1,13 +1,17 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
+
+// 🔥 IMPORTANTE
+app.use(cors());
 app.use(express.json());
 
 // Función de análisis simple
 function analizarSintomas(texto = "") {
 texto = texto.toLowerCase();
 
-```
+
 let nivel = "leve";
 let especialidad = "Medicina general";
 let recomendacion = "Descanso y monitoreo.";
@@ -46,7 +50,7 @@ else if (
 }
 
 return { nivel, especialidad, recomendacion };
-```
+
 
 }
 
@@ -54,7 +58,7 @@ return { nivel, especialidad, recomendacion };
 app.post("/chat", (req, res) => {
 const { mensaje } = req.body;
 
-```
+
 if (!mensaje) {
     return res.status(400).json({
         reply: "Falta el mensaje del usuario"
@@ -64,7 +68,7 @@ if (!mensaje) {
 const resultado = analizarSintomas(mensaje);
 
 const respuesta = `
-```
+
 
 Este sistema realiza una orientación inicial y no sustituye un diagnóstico médico profesional.
 
@@ -73,13 +77,13 @@ Especialidad sugerida: ${resultado.especialidad}
 Recomendación: ${resultado.recomendacion}
 `;
 
-```
+
 res.json({ reply: respuesta });
-```
+
 
 });
 
-// Endpoint de prueba (para navegador)
+// Endpoint de prueba
 app.get("/", (req, res) => {
 res.send("Servidor de bot médico funcionando 🔥");
 });
