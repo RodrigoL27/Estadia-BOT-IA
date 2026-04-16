@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Médico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movil.css">
+  </head>
+  <body>
+    <div id="chat-toggle">💬</div>
+    <div id="chat" class="hidden">
+      <div id="header">
+        Asistente Médico
+        <div id="close-chat">✕</div>
+      </div>
+      <div id="mensajes"></div>
+      <div id="inputArea">
+        <input id="msg" placeholder="Escribe tus síntomas..." />
+        <button onclick="enviar()">Enviar</button>
+      </div>
+    </div>
+    <script src="chat.js" defer></script>
+  </body>
+</html>
